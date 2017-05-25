@@ -1,0 +1,20 @@
+{
+  "name": "projetof",
+  "homepage": "https://github.com/rayane111/projetof",
+  "authors": [
+    "rayane111 <rayane111.rl@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.10"
+  }
+}
