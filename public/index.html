@@ -9,66 +9,102 @@
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/semantic/dist/semantic.min.js"></script>
 </head>
-
+<style type="text/css">
+    body {
+      background-color:	#D1EEEE
+    ;
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your password'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+  </script>
 <body>
-    <div class="ui attached stackable menu">
-        <div class="ui container">
-            <a class="item">
-                <i class="home icon"></i> Home
-            </a>
-            <a class="item">
-                <i class="grid layout icon"></i> Browse
-            </a>
-            <a class="item">
-      <i class="mail icon"></i> Messages
-    </a>
-            <div class="ui simple dropdown item">
-                More
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <a class="item"><i class="edit icon"></i> Edit Profile</a>
-                    <a class="item"><i class="globe icon"></i> Choose Language</a>
-                    <a class="item"><i class="settings icon"></i> Account Settings</a>
-                </div>
-            </div>
-            <div class="right item">
-                <div class="ui input"><input type="text" placeholder="Search..."></div>
-            </div>
-        </div>
-    </div>
-    <div class="ui container">
+    
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+     
+      <div class="content">
+        Entre em sua Conta
+      </div>
+    </h2>
+    <div class="ui raised very padded text container segment">
 
-        <table class="ui single line table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Registration Date</th>
-                    <th>E-mail address</th>
-                    <th>Premium Plan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John Lilki</td>
-                    <td>September 14, 2013</td>
-                    <td>jhlilk22@yahoo.com</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>Jamie Harington</td>
-                    <td>January 11, 2014</td>
-                    <td>jamieharingonton@yahoo.com</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Jill Lewis</td>
-                    <td>May 11, 2014</td>
-                    <td>jilsewris22@yahoo.com</td>
-                    <td>Yes</td>
-                </tr>
-            </tbody>
-        </table>
+    <form class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="Usuário:">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Senha:">
+          </div>
+        </div>
+        <div class="dropdown">
+       
+    <p>
+        
+        <div class="ui fluid large teal submit button">Login</div>
+      </div> 
+
+      <div class="ui error message"></div>
+
+     
+
+    </form>
+
+     
     </div>
+
+
 </body>
 
 </html>

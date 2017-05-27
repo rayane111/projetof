@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="vendors/semantic/dist/semantic.min.css" rel="stylesheet">
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="../../dist/components/dropdown.js"></script>
+    <script>
+  $(document)
+
+ 
+    .ready(function() {
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.menu a.item')
+        .on('click', function() {
+          $(this)
+            .addClass('active')
+            .siblings()
+            .removeClass('active')
+          ;
+        })
+      ;
+    })
+  ;
+
+   $(document)
+
+ 
+    .ready(function() {
+      $('.ui.form .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.menu a.item')
+        .on('click', function() {
+          $(this)
+            .addClass('active')
+            .siblings()
+            .removeClass('active')
+          ;
+        })
+      ;
+    })
+  ;
+
+  
+ 
+  </script>
+
+</head>
+
+
+<body>
+    
+     
+<div class="ui inverted segment">
+  <div class="ui inverted secondary pointing menu">
+        <h2>  Sistem Tickets</h2>    
+  
+  <div class="right menu">
+    <a class="item">Sair</a>
+  
+  </div>
+  </div>
+  
+</div>
+
+
+
+
+<div class="ui menu">
+  <a class="item">Novo Ticket</a>
+
+  <div class="ui dropdown item">
+    Status Tickets
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">Em Aberto</div>
+      <div class="item">Andamento</div>
+      <div class="item">Finalizados</div>
+    </div>
+  </div>
+ 
+</div>
+
+
+<div class="ui raised very padded text container segment">
+
+  <h3 class="ui left aligned header center">
+    Envie seu Ticket!
+    
+  </h3>
+<div class="ui form">
+  <div class="field">
+      <label>Prioridade:</label>
+      <div class="ui selection dropdown">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="default text">Escolha uma opção</div>
+          <div class="menu">
+              <div class="item" data-value="1">Baixa</div>
+              <div class="item" data-value="0">Média</div>
+              <div class="item" data-value="0">Alta</div>
+              <div class="item" data-value="0">Urgente</div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<p>
+  
+<div class="ui form">
+  <div class="field">
+      <label>Assunto:</label>
+      <div class="ui selection dropdown">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="default text">Escolha um assunto</div>
+          <div class="menu">
+              <div class="item" data-value="1">Problemas com Software</div>
+              <div class="item" data-value="0">Problemas com login</div>
+              <div class="item" data-value="0">Problemas com Rede</div>
+              
+          </div>
+      </div>
+  </div>
+</div>
+</p>
+<label>Detalhe seu Problema:</label>
+<form class="ui reply form">
+    <div class="field">
+      <textarea></textarea>
+    </div>
+    <div class="ui blue labeled submit icon button "><i class="icon edit"></i> Enviar </div>
+  </form>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="ui inverted segment">
+  <div class="ui inverted statistic">
+
+    <div class="ui green inverted statistic">
+    
+  </div>
+</div>
+
+
+ <div class="ui black inverted vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable inverted grid">
+      <div class="three wide column">
+        <h4 class="ui inverted header">Community</h4>
+        <div class="ui inverted link list">
+          <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
+          <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
+          <a class="item" href="/cla.html" target="_blank">CLA</a>
+        </div>
+      </div>
+      
+      </div>
+
+</body>
+
+</html>
